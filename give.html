@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Give - Woodland Baptist Church</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <a href="index.html" class="logo">
+            <img src="images/logo.png" alt="Woodland Park Baptist Church Logo">
+        </a>
+        <nav class="navigation">
+            <a href="index.html">Home</a>
+            <a href="#">About Us</a>
+            <a href="#">Events</a>
+            <a href="give.html">Give</a>
+            <a href="#">Contact</a>
+            <button class="btnLogin-popup">Login</button>
+        </nav>
+    </header>
+
+    <div class="quote-box">
+        <p>“In everything I did, I showed you that by this kind of hard work we must help the weak, 
+            remembering the words the Lord Jesus himself said: ‘It is more blessed to give than to receive.”</p>
+        <cite>- Acts 20:35 (NIV)</cite>
+    </div>
+
+    <section class="donation-container">
+        <div class="donation-box">
+            <h1>Give to Woodland Baptist Church</h1>
+            <h3>Oak Ridge, TN</h3>
+            <p>Forwarding the gospel of Jesus Christ!</p>
+
+
+
+            <form class="donation-form">
+                <label for="amount">How much would you like to give?</label>
+                <div class="input-group">
+                    <span>$</span>
+                    <input type="number" id="amount" placeholder="0.00">
+                </div>
+
+                <label for="fund">Fund</label>
+                <select id="fund">
+                    <option value="general">General Giving</option>
+                    <option value="missions">Missions</option>
+                    <option value="building">Building Fund</option>
+                </select>
+
+                <button type="submit" class="btn-donate">Continue</button>
+            </form>
+
+
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
