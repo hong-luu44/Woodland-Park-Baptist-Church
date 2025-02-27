@@ -17,8 +17,8 @@ html {
 body {
     display: flex;
     flex-direction: column;
-    background: url('../images/church.png') no-repeat center center;
-    background-size: cover;
+    background: url('../images/church.png') no-repeat top center;
+    background-size: contain;
     align-items: center;
     justify-content: flex-start; /* Align content from the top */
     min-height: 200vh;
@@ -38,8 +38,6 @@ header {
     align-items: center;
     z-index: 99;
 }
-
-
 
 .logo img {
     height: 100px; 
@@ -113,7 +111,9 @@ header {
     left: 0;
     width: 100%;
     height: 100%;
+    max-height: 100vh; /* Ensure it only covers the hero section */
     background: rgba(0, 0, 0, 0.5);
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0) 100%);
 }
 
 .hero-content {
@@ -143,49 +143,17 @@ header {
     margin: 0 auto;
 }
 
-.cta-buttons {
-    margin-top: 20px;
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
 }
 
-.btn {
-    display: inline-block;
-    padding: 12px 24px;
-    margin: 10px;
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: bold;
-    border-radius: 50px;
-    transition: all 0.3s ease-in-out;
-}
-
-.btn.primary {
-    background: #28a745;
-    color: white;
-}
-
-.btn.primary:hover {
-    background: #218838;
-}
-
-.btn.secondary {
-    background: #007bff;
-    color: white;
-}
-
-.btn.secondary:hover {
-    background: #0056b3;
-}
-
-.hero h1, .hero h2, .hero p, .cta-buttons {
+.hero h1, .hero h2, .hero p {
     opacity: 0;
     transform: translateY(20px);
     animation: fadeInUp 1s ease-in-out forwards;
 }
 
-@keyframes fadeInUp {
-    0% { opacity: 0; transform: translateY(20px); }
-    100% { opacity: 1; transform: translateY(0); }
-}
 
 .donation-container {
     display: flex;
