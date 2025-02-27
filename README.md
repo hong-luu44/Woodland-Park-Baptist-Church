@@ -1,1 +1,1 @@
-# Woodland-Park-Baptist-Church
+# Woodland Park Baptist Church
