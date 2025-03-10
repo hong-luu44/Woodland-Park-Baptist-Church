@@ -1,18 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Woodland Baptist Church</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Give - Woodland Baptist Church</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <header>
         <a href="index.html" class="logo">
-            <img src="images/church.png.png" alt="Woodland Park Baptist Church Logo">
+            <img src="images/logo.png" alt="Woodland Park Baptist Church Logo">
         </a>
         <nav class="navigation">
             <a href="#">Home</a>
@@ -25,7 +23,7 @@
             </div>
 
             <div class="dropdown">
-                <a href="#">Ministries</a>
+                <a href="#">Minitries</a>
                 <div class="dropdown-content">
                     <a href="#">Church Ministries</a>
                     <a href="#">Worship</a>
@@ -56,41 +54,66 @@
         </nav>
     </header>
 
-    
+    <div class="quote-box">
+        <p>“Remembering the words the Lord Jesus himself said: ‘It is more blessed to give than to receive.”</p>
+        <cite>- Acts 20:35 (NIV)</cite>
+    </div>
 
-   
+    <div class="payment-container">
+        <h1>Complete Your Donation</h1>
 
-    <section class="hero">
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <h1>Woodland Park Baptist Church</h1>
-            <h2>Oak Ridge, Tennessee</h2>
-            <p>We are a loving community standing firm in God's truth, dedicated to outreach and worship.</p>
+        <label for="payment-method">Select Payment Method:</label>
+        <select id="payment-method">
+            <option value="ach">ACH (Bank Transfer)</option>
+            <option value="card">Credit/Debit Card</option>
+        </select>
+
+        <!-- ACH Payment Section -->
+<div id="ach-payment" class="payment-section">
+    <h2>Bank Transfer (ACH)</h2>
+
+    <div class="ach-input-container">
+        <div class="ach-input-group">
+            <label for="routing-number">Routing Number:</label>
+            <input type="text" id="routing-number" placeholder="Enter Routing Number" maxlength="9">
         </div>
-    </section>
-    
-    <section class="service-times">
-        <div class="service-text">
-            <h2>Join Us for Worship</h2>
-            <p><strong>Sunday Service:</strong> 10:45 AM</p>
-            <p><strong>Sunday Bible Study:</strong> 9:45 AM - 10:45 AM</p>
-            <p><strong>Wednesday Bible Study:</strong> 6:15 PM</p>
+
+        <div class="ach-input-group">
+            <label for="account-number">Account Number:</label>
+            <input type="text" id="account-number" placeholder="Enter Account Number">
         </div>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3227.504786631832!2d-84.
-        25042892419762!3d36.007964872483576!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x885c3317c8f17d11%3A0x793454de5d4af6e3!2sWOODLAND%20PARK%20BAPTIST%20CHURCH!5e0!3m2!1sen!2sus!4v1741025613199!5m2!1sen!2sus" 
-        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </section>
-    
-    
-    <section class="daily-devotional">
-        <h2>Daily Devotional</h2>
-        <blockquote id="devotional-text">
-            "Trust in the Lord with all your heart and lean not on your own understanding." - Proverbs 3:5
-        </blockquote>
-        <button onclick="fetchNewDevotion()">Get Another Verse</button>
-    </section>
-    
-    
+    </div>
+
+    <label for="account-type">Account Type:</label>
+    <div class="account-type-selection">
+        <label><input type="radio" name="account-type" value="checking" checked> Checking</label>
+        <label><input type="radio" name="account-type" value="savings"> Savings</label>
+    </div>
+
+    <p id="masked-ach-info" class="masked-text hidden"></p>
+</div>
+
+
+
+
+        <!-- Card Payment Section -->
+        <div id="card-payment" class="payment-section hidden">
+            <h2>Credit/Debit Card</h2>
+            <label for="card-number">Card Number:</label>
+            <input type="text" id="card-number" placeholder="Enter Card Number" maxlength="16">
+
+            <label for="expiry-date">Expiration Date:</label>
+            <input type="text" id="expiry-date" placeholder="MM/YY" maxlength="5">
+
+            <label for="cvv">CVV:</label>
+            <input type="text" id="cvv" placeholder="CVV" maxlength="4">
+
+            <p id="masked-card-info" class="masked-text hidden"></p>
+        </div>
+
+        <button id="submit-payment" class="btn-submit">Confirm Payment</button>
+    </div>
+
 
     <footer class="footer">
         <div class="footer-container">
@@ -128,9 +151,6 @@
         </div>
         <p class="footer-copyright">&copy; 2025 Woodland Park Baptist Church. All rights reserved.</p>
     </footer>
-
-    
-
     
 
     <script src="script.js"></script>

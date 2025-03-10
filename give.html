@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Give - Woodland Baptist Church</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
 </head>
 
 <body>
@@ -13,84 +15,165 @@
             <img src="images/logo.png" alt="Woodland Park Baptist Church Logo">
         </a>
         <nav class="navigation">
-            <a href="index.html">Home</a>
-            <a href="#">About Us</a>
-            <a href="#">Events</a>
-            <a href="give.html">Give</a>
-            <a href="#">Contact</a>
-            <button class="btnLogin-popup">Login</button>
+            <a href="#">Home</a>
+            <div class="dropdown">
+                <a href="#">About Us</a>
+                <div class="dropdown-content">
+                    <a href="#">Our History</a>
+                    <a href="#">Plan a Visit</a>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <a href="#">Ministries</a>
+                <div class="dropdown-content">
+                    <a href="#">Church Ministries</a>
+                    <a href="#">Worship</a>
+                    <a href="#">Community Outreach</a>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <a href="#">Join Us</a>
+                <div class="dropdown-content">
+                    <a href="#">Baptism</a>
+                    <a href="#">Volunteer Opportunities</a>
+                    <a href="#">Join a Group</a>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <a href="#">Testimonials</a>
+                <div class="dropdown-content">
+                    <a href="#">Member Stories</a>
+                    <a href="#">Faith Journeys</a>
+                </div>
+            </div>
+
+            <button class="btnLogin-popup">Give</button>
         </nav>
     </header>
 
     <div class="quote-box">
-        <p>“In everything I did, I showed you that by this kind of hard work we must help the weak, 
-            remembering the words the Lord Jesus himself said: ‘It is more blessed to give than to receive.”</p>
+        <p>“Remembering the words the Lord Jesus himself said: ‘It is more blessed to give than to receive.”</p>
         <cite>- Acts 20:35 (NIV)</cite>
     </div>
 
     <section class="donation-container">
         <div class="donation-box">
-            <h1>Give to Woodland Baptist Church</h1>
+            <h1>Make a Difference</h1>
+            <h2>Support Woodland Baptist Church</h2>
             <h3>Oak Ridge, TN</h3>
-            <p>Forwarding the gospel of Jesus Christ!</p>
+            <p>Your generous contribution helps spread the message of faith and love.</p>
 
-
-
-            <form class="donation-form">
+            <form class="donation-form" id="donationForm">
                 <label for="amount">How much would you like to give?</label>
                 <div class="input-group">
                     <span>$</span>
                     <input type="number" id="amount" placeholder="0.00">
                 </div>
 
-                <label for="fund">Fund</label>
+                <label for="fund">Select a Fund</label>
                 <select id="fund">
                     <option value="general">General Giving</option>
                     <option value="missions">Missions</option>
                     <option value="building">Building Fund</option>
                 </select>
 
-                <button type="submit" class="btn-donate">Continue</button>
+                <label for="frequency">Give Frequently</label> 
+                <select id="frequency">
+                    <option value="one-time">One-Time</option>
+                    <option value="weekly">Weekly</option>
+                    <option value="monthly">Monthly</option>
+                    <option value="yearly">Yearly</option>
+                </select>
+
+                <!-- Payment Selection Section -->
+<h3 class="payment-title">How would you like to give?</h3>
+<div class="payment-options">
+    <label class="payment-label">
+        <input type="radio" name="payment-method" value="ach-card" checked>
+        ACH (Bank Transfer) or Debit/Credit Card
+    </label>
+    <label class="payment-label">
+        <input type="radio" name="payment-method" value="paypal">
+        PayPal
+    </label>
+</div>
+
+
+                <button type="submit" class="btn-donate">Proceed to Donation</button>
             </form>
-
-
         </div>
     </section>
 
-    <section class="welcome">
-        <h2>Welcome to Woodland Park Baptist Church</h2>
-        <p>We are a community of faith, committed to standing firm in God’s truth and serving with love.</p>
-    </section>
-    
-    <section class="service-times">
-        <h2>Join Us for Worship</h2>
-        <p><strong>Sunday Service:</strong> 10:30 AM | <strong>Wednesday Bible Study:</strong> 7:00 PM</p>
-        <iframe src="https://www.google.com/maps/embed?pb=..." width="600" height="400"></iframe>
-    </section>
-    
-    <section class="events">
-        <h2>Upcoming Events</h2>
-        <div class="event">
-            <h3>Community Outreach</h3>
-            <p>March 10 | Join us as we serve our local community with love.</p>
+    <section class="payment-info">
+        <div class="payment-method">
+            <h2>Give by Cash or Check</h2>
+            <p>
+                You’re welcome to give during any of our services by placing your cash or check in the designated offering boxes 
+                near the church exits. Checks can be made payable to <strong>“Woodland Baptist Church.”</strong>
+            </p>
+            <p>If mailing a donation, please send it to:</p>
+            <p><strong>228 Manhattan Ave, Oak Ridge, TN 37830</strong></p>
+            <p>All check contributions are recorded and processed on a weekly basis.</p>
         </div>
-        <div class="event">
-            <h3>Easter Sunday Service</h3>
-            <p>March 31 | Celebrate the resurrection with us!</p>
+
+        <div class="payment-method">
+            <h2>Donate Using Card or ACH</h2>
+            <p>
+                Make a secure donation online using your **credit card, debit card, or bank transfer (ACH).**  
+                Your contribution is processed instantly and will reflect in your giving records immediately.
+            </p>
+            <p>You can give conveniently through our secure online platform.</p>
+            <a href="#" class="btn-give-online">Give Securely Online</a>
+        </div>
+
+        <div class="payment-method">
+            <h2>Give via PayPal</h2>
+            <p>
+                Prefer to give through PayPal? You can send your donation quickly and securely using PayPal, 
+                offering a hassle-free way to contribute from anywhere.
+            </p>
+            <a href="https://www.paypal.com/donate" target="_blank" class="btn-give-online">Donate with PayPal</a>
         </div>
     </section>
-    
-    <section class="quote">
-        <p>"For where two or three gather in my name, there am I with them." - Matthew 18:20</p>
-    </section>
-    
-    <section class="newsletter">
-        <h2>Stay Connected</h2>
-        <p>Sign up for updates on events and ministries.</p>
-        <input type="email" placeholder="Enter your email">
-        <button>Subscribe</button>
-    </section>
-    
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section stay-connected">
+                <h2>Stay Connected</h2>
+                <p>Stay updated with the latest church news, events, and special announcements!</p>
+                <form class="email-signup">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+
+                <div class="footer-buttons">
+                    <a href="#" class="visit">Visit</a>
+                    <a href="#" class="contact">Contact Us</a>
+                </div>
+            </div>
+            <div class="footer-section contact-info">
+                <h2>Contact Us</h2>
+                <p>228 Manhattan Ave, Oak Ridge, TN 37830</p>
+                <p>Phone: (865) 483-9469</p>
+                <p>Email: <a href="mailto:info@woodlandbaptist.org">info@woodlandbaptist.org</a></p>
+            </div>
+            <div class="footer-section social-media">
+                <h2>Follow Us</h2>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/woodlandparkbapt" target="_blank">
+                        <i class="fa-brands fa-facebook"></i> Facebook
+                    </a>
+                    <a href="https://youtube.com" target="_blank">
+                        <i class="fa-brands fa-youtube"></i> YouTube
+                    </a>
+                </div>
+            </div>
+        </div>
+        <p class="footer-copyright">&copy; 2025 Woodland Park Baptist Church. All rights reserved.</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
